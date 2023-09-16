@@ -1,0 +1,56 @@
+.longButton {
+    @apply w-[400px] h-[50px] rounded-[3px];
+    &.defaultButton {
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    &:hover {
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+    }
+    &:active {
+        box-shadow: 0px 0px 4px #bdbdbd;
+    }
+}
+
+.longButtonDisabled {
+    @apply w-[400px] h-[50px] rounded-[3px] cursor-not-allowed;
+    &.defaultButton {
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    &:disabled {
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+    }
+}
+
+.radioButton {
+    display: none;
+}
+
+.formRadio label {
+    @apply inline-block cursor-pointer relative mr-0 leading-[18px] select-none p-[15px_12px_15px] w-full h-full;
+}
+
+.formRadio label span {
+    @apply ml-[14px] relative bottom-1
+}
+
+.formRadio label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../public/radio/radio-default.svg") 0 0 no-repeat;
+}
+
+.formRadio input[type="radio"]:checked+label:before {
+    background: url("../../public/radio/radio-checked.svg") 0 0 no-repeat;
+}
+
+.formRadio label:hover:before {
+    background: url("../../public/radio/radio-hover.svg") 0 0 no-repeat;
+}
+
+.formRadio input[type="radio"]:disabled+label:before {
+    background: url("../../public/radio/radio-disabled.svg") 0 0 no-repeat;
+    color: #bdbdbd;
+    cursor: not-allowed;
+}

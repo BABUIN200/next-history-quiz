@@ -1,0 +1,17 @@
+.secondary {
+    @apply w-[151px] h-[42px] uppercase text-sm font-medium rounded-md text-center leading-[18px] py-3 px-6 border-none cursor-pointer;
+    &.defaultBtn {
+        @apply text-[#006666] bg-[#e6f0f0];
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:hover {
+        @apply text-[#ffffff] bg-[#3ab8bc] shadow-none;
+    }
+    &:active {
+        @apply text-[#ffffff] bg-[#006666];
+    }
+}
+
+.secondaryDisabled {
+    @apply w-[151px] h-[42px] uppercase text-sm font-medium rounded-md text-center leading-[18px] py-3 px-6 text-[#006666] bg-[#e6f0f0] opacity-[0.45] cursor-not-allowed border-none;
+}
